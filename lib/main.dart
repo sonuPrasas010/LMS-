@@ -74,258 +74,365 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      drawer: Drawer(),
-      appBar: AppBar(
-        backgroundColor: primarycolor,
-        elevation: 0,
-        bottom: PreferredSize(
-          child: Divider(
-            color: Colors.white,
-            thickness: 2,
-            height: 2,
-            endIndent: 10,
-            indent: 10,
+        drawer: Drawer(),
+        appBar: AppBar(
+          backgroundColor: primarycolor,
+          elevation: 0,
+          bottom: PreferredSize(
+            child: Divider(
+              color: Colors.white,
+              thickness: 2,
+              height: 2,
+              endIndent: 10,
+              indent: 10,
+            ),
+            preferredSize: Size(double.maxFinite, 0),
           ),
-          preferredSize: Size(double.maxFinite, 0),
+          // leading: Icon(
+          //   Icons.dashboard,
+          //   color: Colors.white,
+          // ),
+
+          actions: [
+            Row(
+              children: [
+                Icon(Icons.notifications),
+              ],
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network(
+                  "https://www.directive.com/images/easyblog_shared/July_2018/7-4-18/b2ap3_large_totw_network_profile_400.jpg",
+                  height: 10000,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )
+          ],
+
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
         ),
-        // leading: Icon(
-        //   Icons.dashboard,
-        //   color: Colors.white,
-        // ),
-
-        actions: [
-          Row(
-            children: [
-              Icon(Icons.notifications),
-            ],
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                "https://www.directive.com/images/easyblog_shared/July_2018/7-4-18/b2ap3_large_totw_network_profile_400.jpg",
-                height: 10000,
-                fit: BoxFit.cover,
-              ),
-            ),
-          )
-        ],
-
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-      ),
-      body: Stack(
-        children: [
-          Positioned(
-            top: 0,
-            bottom: 0,
-            right: 0,
-            left: 0,
-            child: Container(
-              color: primarycolor,
-              width: double.maxFinite,
-              // height: ,
+        body: Stack(
+          children: [
+            Positioned(
+              top: 0,
+              bottom: 0,
+              right: 0,
+              left: 0,
               child: Container(
-                margin: EdgeInsets.only(
-                  left: 40,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    const Text(
-                      "Hi, hamenta!",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Text(
-                      "What are the courses you are seeking for?",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        Flexible(
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText: "Search Course",
-                              contentPadding: EdgeInsets.all(2),
-                              // enabledBorder: OutlineInputBorder(
-                              //   borderRadius: BorderRadius.circular(25.0),
-                              //   borderSide: const BorderSide(
-                              //     // color: Colors.red,
-                              //     width: 2.0,
-                              //   ),
-                              // ),
-                              // disabledBorder: OutlineInputBorder(
-                              //   borderRadius: BorderRadius.circular(25.0),
-                              //   borderSide: const BorderSide(
-                              //     // color: Colors.red,
-                              //     width: 2.0,
-                              //   ),
-                              // ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                                borderSide: const BorderSide(
-                                  // color: Colors.red,
-                                  width: 2.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              prefixIcon: Icon(
-                                Icons.search,
-                                color: Colors.black,
-                              ),
-                              filled: true,
-                              fillColor: Colors.white,
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                          ),
-                          child: Icon(
-                            color: Color(0xffffcc00),
-                            Icons.tune,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 200,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            // left: 50,
-            // right: 50,
-            child: Container(
-              padding: EdgeInsets.only(top: 50, left: 20, right: 20),
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(8)),
-              child: Column(
-                children: [
-                  Row(
+                color: primarycolor,
+                width: double.maxFinite,
+                // height: ,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    left: 40,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(
+                        height: 20,
+                      ),
                       const Text(
-                        "Recommeded Course!",
+                        "Hi, hamenta!",
                         style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          fontSize: 14,
+                          color: Colors.white,
+                          fontSize: 20,
                         ),
                       ),
-                      Spacer(),
-                      Directionality(
-                        textDirection: TextDirection.rtl,
-                        child: TextButton.icon(
-                          style: TextButton.styleFrom(),
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.arrow_back,
-                            size: 20,
-                          ),
-                          label: Text(
-                            "See More",
-                            style: TextStyle(
-                              fontSize: 14,
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        "What are the courses you are seeking for?",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Flexible(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                hintText: "Search Course",
+                                contentPadding: EdgeInsets.all(2),
+                                // enabledBorder: OutlineInputBorder(
+                                //   borderRadius: BorderRadius.circular(25.0),
+                                //   borderSide: const BorderSide(
+                                //     // color: Colors.red,
+                                //     width: 2.0,
+                                //   ),
+                                // ),
+                                // disabledBorder: OutlineInputBorder(
+                                //   borderRadius: BorderRadius.circular(25.0),
+                                //   borderSide: const BorderSide(
+                                //     // color: Colors.red,
+                                //     width: 2.0,
+                                //   ),
+                                // ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  borderSide: const BorderSide(
+                                    // color: Colors.red,
+                                    width: 2.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                prefixIcon: Icon(
+                                  Icons.search,
+                                  color: Colors.black,
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Icon(
+                              color: Color(0xffffcc00),
+                              Icons.tune,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                  Divider(),
-                ],
+                ),
               ),
             ),
-          ),
-          Positioned(
-            top: 150,
-            left: 0,
-            right: 0,
-            child: SizedBox(
-              height: 100,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+            Positioned(
+              top: 200,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              // left: 50,
+              // right: 50,
+              child: Container(
+                padding: EdgeInsets.only(top: 50, left: 20, right: 20),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                    )),
+                child: Column(
                   children: [
-                    for (var i = 0; i < 5; i++)
-                      Container(
-                        margin: const EdgeInsets.only(left: 20),
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 2,
-                              offset:
-                                  Offset(3, 5), // changes position of shadow
-                            ),
-                          ],
+                    Row(
+                      children: [
+                        const Text(
+                          "Recommeded Course!",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 14,
+                          ),
                         ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.music_note,
-                              color: secondryColor,
+                        Spacer(),
+                        Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: TextButton.icon(
+                            style: TextButton.styleFrom(),
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.arrow_back,
+                              size: 12,
                             ),
-                            Text(
-                              "Music",
+                            label: Text(
+                              "See More",
                               style: TextStyle(
-                                color: Colors.grey,
+                                fontSize: 12,
                               ),
                             ),
-                          ],
+                          ),
                         ),
-                      )
+                      ],
+                    ),
+                    Divider(),
                   ],
                 ),
               ),
             ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              decoration: BoxDecoration(
-                  color: primarycolor, borderRadius: BorderRadius.circular(10)),
-              height: 70,
+
+            Positioned(
+              top: 150,
+              left: 0,
+              right: 0,
+              child: SizedBox(
+                height: 100,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i = 0; i < 5; i++)
+                        Container(
+                          margin: const EdgeInsets.only(left: 20),
+                          height: 70,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.2),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset:
+                                    Offset(0, 1), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.music_note,
+                                color: secondryColor,
+                              ),
+                              Text(
+                                "Music",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            // removed from here and placed it to bottom navigation bar
+            // so it will hide while opening keyboard
+            // Positioned(
+            //   bottom: 0,
+            //   left: 0,
+            //   right: 0,
+            //   child: Container(
+            //     padding:
+            //         const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            //     decoration: BoxDecoration(
+            //       color: primarycolor,
+            //       borderRadius: BorderRadius.circular(10),
+            //     ),
+            //     height: 70,
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //       children: [
+            //         Container(
+            //           padding:
+            //               EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+            //           decoration: BoxDecoration(
+            //               color: secondryColor,
+            //               borderRadius: BorderRadius.circular(10)),
+            //           child: Column(
+            //             children: [
+            //               Icon(
+            //                 Icons.home,
+            //                 color: Colors.white,
+            //               ),
+            //               Text(
+            //                 "Home",
+            //                 style: TextStyle(color: Colors.white, fontSize: 12),
+            //               )
+            //             ],
+            //           ),
+            //         ),
+            //         Container(
+            //           padding:
+            //               EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+            //           decoration: BoxDecoration(
+            //               borderRadius: BorderRadius.circular(10)),
+            //           child: Column(
+            //             children: [
+            //               Icon(
+            //                 Icons.fact_check,
+            //                 color: Colors.white,
+            //               ),
+            //               Text(
+            //                 "Course",
+            //                 style: TextStyle(color: Colors.white, fontSize: 12),
+            //               )
+            //             ],
+            //           ),
+            //         ),
+            //         //  favourite
+            //         Container(
+            //           padding: const EdgeInsets.symmetric(
+            //               horizontal: 20, vertical: 6),
+            //           decoration: BoxDecoration(
+            //               borderRadius: BorderRadius.circular(10)),
+            //           child: Column(
+            //             children: const [
+            //               Icon(
+            //                 Icons.favorite,
+            //                 color: Colors.white,
+            //               ),
+            //               Text(
+            //                 "Favorite",
+            //                 style: TextStyle(color: Colors.white, fontSize: 12),
+            //               )
+            //             ],
+            //           ),
+            //         ),
+            //         //  profile
+            //         Container(
+            //           padding: EdgeInsets.symmetric(
+            //             horizontal: 20,
+            //             vertical: 6,
+            //           ),
+            //           decoration: BoxDecoration(
+            //               // color: secondryColor,
+            //               borderRadius: BorderRadius.circular(10)),
+            //           child: Column(
+            //             children: [
+            //               Icon(
+            //                 Icons.account_circle_rounded,
+            //                 color: Colors.white,
+            //               ),
+            //               Text(
+            //                 "Profile",
+            //                 style: TextStyle(color: Colors.white, fontSize: 12),
+            //               )
+            //             ],
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
+          ],
+        ),
+        bottomNavigationBar: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            decoration: BoxDecoration(
+              color: primarycolor,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(
+                10,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -335,6 +442,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: secondryColor,
                         borderRadius: BorderRadius.circular(10)),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
                           Icons.home,
@@ -349,9 +457,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
                           Icons.fact_check,
@@ -371,6 +481,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(10)),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: const [
                         Icon(
                           Icons.favorite,
@@ -393,6 +504,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         // color: secondryColor,
                         borderRadius: BorderRadius.circular(10)),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
                           Icons.account_circle_rounded,
@@ -407,10 +519,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-            ),
-          ),
-        ],
-      ),
-    );
+            )));
   }
 }
