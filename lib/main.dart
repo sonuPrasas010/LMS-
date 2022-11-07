@@ -268,11 +268,166 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                     Divider(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            Image.network(
+                              "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300",
+                              height: 150,
+                              fit: BoxFit.cover,
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              left: 0,
+                              top: 0,
+                              right: 0,
+                              child: Icon(
+                                Icons.play_circle_outline,
+                                color: Colors.white,
+                                size: 50,
+                              ),
+                            ),
+                            Positioned(
+                              left: 10,
+                              top: 10,
+                              child: Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 6, horizontal: 6),
+                                decoration: BoxDecoration(
+                                  color: primarycolor,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  "3 hrs 24 min",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    wordSpacing: 2,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              right: 10,
+                              child: Chip(
+                                backgroundColor: primarycolor,
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                ),
+                                labelPadding: EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                ),
+                                label: Text(
+                                  "Your pick 💛",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    wordSpacing: 2,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(5),
+                                child: Image.network(
+                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4GmQfTQmQwq0jcZiScNuz7VHWOfX0Y0_f7D5s1QuT&s",
+                                  height: 40,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              flex: 3,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Hemanta Jung karki",
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.grey),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "2022-10-12",
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              flex: 2,
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.chat_bubble_outline,
+                                    size: 16,
+                                    color: secondryColor,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    "10",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    size: 16,
+                                    color: secondryColor,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    "10",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
             ),
 
+// stacked widget with icons
             Positioned(
               top: 150,
               left: 0,
