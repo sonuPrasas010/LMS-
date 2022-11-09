@@ -6,6 +6,8 @@ void main() {
 
 const primarycolor = Color(0xff303030);
 const secondryColor = Color(0xffffcc00);
+const customBlue = Color(0xff0032FF);
+const customGrey = Color(0xffE5E5E5);
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
