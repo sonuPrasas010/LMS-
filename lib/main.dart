@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:lms/second.dart';
 
 void main() {
   runApp(const MyApp());
@@ -243,7 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       children: [
                         const Text(
-                          "Recommeded Course!",
+                          "Recommended Course!",
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 14,
@@ -282,19 +284,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               fit: BoxFit.cover,
                             ),
                             Positioned(
-                              bottom: 0,
-                              left: 0,
-                              top: 0,
-                              right: 0,
-                              child: Icon(
-                                Icons.play_circle_outline,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                            Positioned(
-                              left: 10,
-                              top: 10,
+                              left: 15,
+                              top: 15,
                               child: Container(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 6, horizontal: 6),
@@ -313,7 +304,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             Positioned(
-                              right: 10,
+                              right: 15,
+                              top: 15,
                               child: Chip(
                                 backgroundColor: primarycolor,
                                 padding: EdgeInsets.symmetric(
@@ -329,6 +321,25 @@ class _MyHomePageState extends State<MyHomePage> {
                                     fontSize: 10,
                                     wordSpacing: 2,
                                   ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 0,
+                              bottom: 0,
+                              left: 0,
+                              right: 0,
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (builder) => Second()));
+                                },
+                                icon: Icon(
+                                  Icons.play_circle_outline,
+                                  color: Colors.white,
+                                  size: 50,
                                 ),
                               ),
                             ),

@@ -8,7 +8,7 @@ class Second extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      // drawer: Drawer(),
       appBar: AppBar(
         backgroundColor: primarycolor,
         elevation: 0,
@@ -171,7 +171,7 @@ class Second extends StatelessWidget {
                             child: Image.network(
                               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFY8X8BDSNJmIX2UR4V2uTjzpmmfGYnp3W5UuiEDWHP90PFOE1HBC96ZGDY5mH-nfButE&usqp=CAU",
                               height: 40,
-                              fit: BoxFit.cover,
+                              // fit: BoxFit.cover,
                             ),
                           ),
                         ),
@@ -185,9 +185,11 @@ class Second extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "Hemanta Jung karki",
-                                style:
-                                    TextStyle(fontSize: 14, color: Colors.grey),
+                                "Hemanta Jung Karki",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey,
+                                ),
                               ),
                               SizedBox(
                                 height: 6,
@@ -265,10 +267,12 @@ class Second extends StatelessWidget {
                                     ),
                                     onPressed: () {},
                                     style: OutlinedButton.styleFrom(
-                                      primary: Colors.blue,
-                                      onSurface: Colors.blue,
+                                      primary: customBlue,
+                                      onSurface: customBlue,
                                       side: BorderSide(
-                                          width: 1.0, color: Colors.blue),
+                                        width: 1.0,
+                                        color: customBlue,
+                                      ),
                                       padding: EdgeInsets.symmetric(
                                         horizontal: 20,
                                         vertical: 0,
@@ -379,6 +383,9 @@ class Second extends StatelessWidget {
                                   ],
                                 ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             for (var i = 0; i < 5; i++)
                               Padding(
